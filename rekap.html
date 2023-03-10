@@ -99,7 +99,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
           
           function drawVisualization() {
             var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=1FP_pVZVpbvbv0-JRldMrkgzPkzXHehY7YxEKtTzU09o&output=html&gid=1794121367&range=A2:F&&usp=sharing');
-              query.setQuery('SELECT C, D, A, E, B, F label C "Nama", D "Jabatan", A "Tanggal", E "Posisi", B "Waktu", F "Alasan"');
+              query.setQuery('SELECT A, B, C D, E, F label A "Tanggal", B "Waktu", C "Nama", D "Jabatan",  E "Posisi",  F "Alasan"');
               query.send(handleQueryResponse);
           }
           
@@ -110,7 +110,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
               }
               var data = response.getDataTable();
               visualization = new google.visualization.Table(document.getElementById('table'));
-              data.sort([{column: 2, desc: false},{column: 0, desc: false}]);
+              data.sort([{column: 0, desc: false},{column: 1, desc: false}]);
               visualization.draw(data, {
                   allowHtml: true,
                   legend: 'bottom'
