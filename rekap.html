@@ -99,7 +99,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
           
           function drawVisualization() {
             var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=1FP_pVZVpbvbv0-JRldMrkgzPkzXHehY7YxEKtTzU09o&output=html&gid=1794121367&range=A2:F&&usp=sharing');
-              query.setQuery('SELECT C, D, A, E, B, F label C "Nama", D "Jabatan", A "Tanggal Presensi", E "Posisi", B "Waktu ", F "Alasan"');
+              query.setQuery('SELECT C, D, A, E, B, F label C "Nama", D "Jabatan", A "Tanggal", E "Posisi", B "Waktu", F "Alasan"');
               query.send(handleQueryResponse);
           }
           
