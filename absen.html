@@ -23,6 +23,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
 crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
 <style>
    legend {
   
@@ -66,6 +67,18 @@ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
                     </div>
                 </div>
             </nav>
+             <main class="col-md-12 px-3">
+              <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h6"><i class="fa-solid fa-file-lines"></i> Lapor Kendala SiHadirr</h1>
+                <div class="btn-toolbar mb-2 mb-md-0">
+                  <div class="btn-group me-2">
+                    <button type="button" onclick="window.location.href='absen.html'"><i class="fa-solid fa-file-lines"></i>  Form Pengajuan</button>  
+                    <button type="button" onclick="window.location.href='rekap.html'"><i class="fa-solid fa-magnifying-glass"></i> Rekap Pengajuan</button>       
+                   </div>
+                </div>
+              </div>
+        
+            </main>
             <div class="container py-5">
         <div class="row">
             <div class="col-lg-5 col-md-8 mx-auto shadow border bg-white p-4 rounded">
@@ -82,11 +95,11 @@ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
 
 
-  <!-- Field type: "date" id: "1499564649" -->
+    <!-- Field type: "date" id: "1499564649" -->
     <fieldset>
         <legend for="1499564649">Tanggal Absen</legend>
         <div class="form-group">
-            <input type="date" id="1682115560_date" placeholder="10/3/2023" class="form-control" required>
+            <input type="date" id="1682115560_date" placeholder="6/3/2023" class="form-control" required>
         </div>
     </fieldset>
 
@@ -95,7 +108,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <fieldset>
         <legend for="429335087">Waktu Absen</legend>
         <div class="form-group">
-            <input type="time" id="97561330" placeholder="08.46.08" class="form-control" required>
+            <input type="time" id="97561330" placeholder="13.52.39" class="form-control" required>
         </div>
     </fieldset>
 
@@ -105,6 +118,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <legend for="1000802944">Nama</legend>
         <div class="form-group">
             <select id="1000802944" name="entry.756178668" class="form-control">
+                <option value="">Pilih Nama Anda</option>
                 <option value="Drs. Dedi Iswandi">Drs. Dedi Iswandi</option>
                 <option value="Nilam Putri Dewanti, SE., M.Si.">Nilam Putri Dewanti, SE., M.Si.</option>
                 <option value="Yohanes Wahyu Widiasmoro, S.IP., M.Si.">Yohanes Wahyu Widiasmoro, S.IP., M.Si.</option>
@@ -140,6 +154,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <legend for="799497954">Jabatan</legend>
         <div class="form-group">
             <select id="799497954" name="entry.683155922" class="form-control">
+                <option value="">Pilih Nama Jabatan</option>
                 <option value="Kepala Kantor">Kepala Kantor</option>
                 <option value="Perisalah Legislatif Ahli Muda">Perisalah Legislatif Ahli Muda</option>
                 <option value="Kasubbag Perencanaan dan Keuangan">Kasubbag Perencanaan dan Keuangan</option>
@@ -154,7 +169,6 @@ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
                 <option value="Tenaga Pranata Kearsipan">Tenaga Pranata Kearsipan</option>
                 <option value="Tenaga Operasional Pemeliharaan">Tenaga Operasional Pemeliharaan</option>
                 <option value="Tenaga Operasional Angkutan">Tenaga Operasional Angkutan</option>
-                <option value="Tenaga Operasional Pengamanan">Tenaga Operasional Pengamanan</option>
             </select>
         </div>
     </fieldset>
@@ -181,7 +195,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     </fieldset>
 
     <input type="hidden" name="fvv" value="1">
-    <input type="hidden" name="fbzx" value="5708704570363480852">
+    <input type="hidden" name="fbzx" value="321538387196518233">
     <!--
         CAVEAT: In multipages (multisection) forms, *pageHistory* field tells to google what sections we've currently completed.
         This usually starts as "0" for the first page, then "0,1" in the second page... up to "0,1,2..N" in n-th page.
@@ -245,6 +259,7 @@ $('#bootstrapForm').submit(function (event) {
 
 
     $('#bootstrapForm').ajaxSubmit({
+
         data: extraData,
         dataType: 'jsonp',  // This won't really work. It's just to use a GET instead of a POST to allow cookies from different domain.
         error: function () {
